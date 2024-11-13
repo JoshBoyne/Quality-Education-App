@@ -4,6 +4,11 @@
  */
 package qualityeducation;
 
+import java.awt.Graphics;
+import java.awt.Shape;
+import java.awt.geom.RoundRectangle2D;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Josh
@@ -26,37 +31,627 @@ public class QuizJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        MenuPage = new javax.swing.JPanel();
+        menuGoHomePageBTN = new javax.swing.JButton();
+        progtrackerBTN = new javax.swing.JButton();
+        quizBTN = new javax.swing.JButton();
+        learningBTN = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        QuizPage = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        AdminPage = new javax.swing.JPanel();
+        CreateAccount = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        firstnameTF = new javax.swing.JTextField();
+        firstnameLBL = new javax.swing.JLabel();
+        surnameLBL = new javax.swing.JLabel();
+        address1LBL = new javax.swing.JLabel();
+        address2LBL = new javax.swing.JLabel();
+        countryLBL = new javax.swing.JLabel();
+        countyLBL = new javax.swing.JLabel();
+        phonenoLBL = new javax.swing.JLabel();
+        dobLBL = new javax.swing.JLabel();
+        surnameTF = new javax.swing.JTextField();
+        address1TF = new javax.swing.JTextField();
+        address2TF = new javax.swing.JTextField();
+        countyTF = new javax.swing.JTextField();
+        countryTF = new javax.swing.JTextField();
+        phonenoTF = new javax.swing.JTextField();
+        dobTF = new javax.swing.JTextField();
+        createAccountBTN = new javax.swing.JButton();
+        gobackBTN = new javax.swing.JButton();
         Home = new javax.swing.JPanel();
+        loginLBL = new javax.swing.JLabel();
+        passwordTF = new javax.swing.JTextField();
+        usernameLBL = new javax.swing.JLabel();
+        passwordLBL = new javax.swing.JLabel();
+        usernameTF = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        hereBTN = new javax.swing.JButton();
+        loginBTN = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Home.setBackground(new java.awt.Color(153, 255, 255));
+        MenuPage.setBackground(new java.awt.Color(255, 204, 255));
+
+        menuGoHomePageBTN.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        menuGoHomePageBTN.setText("GO BACK HOME PAGE");
+        menuGoHomePageBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuGoHomePageBTNActionPerformed(evt);
+            }
+        });
+
+        progtrackerBTN.setText("PROGRESS TRACKER");
+
+        quizBTN.setText("QUIZZES AND TESTS");
+        quizBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quizBTNActionPerformed(evt);
+            }
+        });
+
+        learningBTN.setText("LEARNING RESOURCES");
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setText("Working Page ^");
+
+        javax.swing.GroupLayout MenuPageLayout = new javax.swing.GroupLayout(MenuPage);
+        MenuPage.setLayout(MenuPageLayout);
+        MenuPageLayout.setHorizontalGroup(
+            MenuPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MenuPageLayout.createSequentialGroup()
+                .addGroup(MenuPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MenuPageLayout.createSequentialGroup()
+                        .addGap(347, 347, 347)
+                        .addComponent(menuGoHomePageBTN))
+                    .addGroup(MenuPageLayout.createSequentialGroup()
+                        .addGap(166, 166, 166)
+                        .addComponent(progtrackerBTN)
+                        .addGap(44, 44, 44)
+                        .addGroup(MenuPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(MenuPageLayout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(quizBTN))
+                        .addGap(48, 48, 48)
+                        .addComponent(learningBTN)))
+                .addContainerGap(258, Short.MAX_VALUE))
+        );
+        MenuPageLayout.setVerticalGroup(
+            MenuPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuPageLayout.createSequentialGroup()
+                .addGap(200, 200, 200)
+                .addGroup(MenuPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(progtrackerBTN)
+                    .addComponent(quizBTN)
+                    .addComponent(learningBTN))
+                .addGap(28, 28, 28)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 159, Short.MAX_VALUE)
+                .addComponent(menuGoHomePageBTN)
+                .addGap(83, 83, 83))
+        );
+
+        QuizPage.setBackground(new java.awt.Color(255, 255, 153));
+        QuizPage.setMinimumSize(new java.awt.Dimension(920, 550));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
+        jLabel5.setText("QUIZ");
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton1.setText("GO BACK TO MENU");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel6.setText("TOPIC");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Topic 1", "Topic 2", "Topic 3", "Topic 4" }));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Question will appear here with the multiple choice answers. User will be able to cycle through the questions\nusing the \"Previous\" and \"Next\" buttons and submit their answers using the \"Submit\" button\n");
+        jScrollPane1.setViewportView(jTextArea1);
+
+        buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setText("A");
+
+        buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setText("B");
+
+        buttonGroup1.add(jRadioButton3);
+        jRadioButton3.setText("C");
+
+        buttonGroup1.add(jRadioButton4);
+        jRadioButton4.setText("D");
+
+        jButton2.setText("SUBMIT TOPIC");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("NEXT");
+
+        jButton4.setText("PREVIOUS");
+
+        jButton5.setText("SUBMIT");
+
+        javax.swing.GroupLayout QuizPageLayout = new javax.swing.GroupLayout(QuizPage);
+        QuizPage.setLayout(QuizPageLayout);
+        QuizPageLayout.setHorizontalGroup(
+            QuizPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(QuizPageLayout.createSequentialGroup()
+                .addGroup(QuizPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(QuizPageLayout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addGroup(QuizPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, QuizPageLayout.createSequentialGroup()
+                                .addGroup(QuizPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jRadioButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jRadioButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(QuizPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(QuizPageLayout.createSequentialGroup()
+                                        .addGap(154, 154, 154)
+                                        .addComponent(jButton4)
+                                        .addGap(36, 36, 36)
+                                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(QuizPageLayout.createSequentialGroup()
+                                        .addGap(214, 214, 214)
+                                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, QuizPageLayout.createSequentialGroup()
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 588, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(97, 97, 97)
+                                .addComponent(jButton2))))
+                    .addGroup(QuizPageLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jButton1)
+                        .addGap(219, 219, 219)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(107, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, QuizPageLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(QuizPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, QuizPageLayout.createSequentialGroup()
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(138, 138, 138))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, QuizPageLayout.createSequentialGroup()
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(85, 85, 85))))
+        );
+        QuizPageLayout.setVerticalGroup(
+            QuizPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(QuizPageLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addGroup(QuizPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
+                .addGap(29, 29, 29)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(QuizPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(QuizPageLayout.createSequentialGroup()
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton2)
+                        .addGap(163, 163, 163)
+                        .addComponent(jRadioButton1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton3)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton4))
+                    .addGroup(QuizPageLayout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(QuizPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton3)
+                            .addComponent(jButton4))
+                        .addGap(40, 40, 40)
+                        .addComponent(jButton5)))
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
+
+        AdminPage.setBackground(new java.awt.Color(51, 0, 255));
+        AdminPage.setMinimumSize(new java.awt.Dimension(920, 550));
+
+        javax.swing.GroupLayout AdminPageLayout = new javax.swing.GroupLayout(AdminPage);
+        AdminPage.setLayout(AdminPageLayout);
+        AdminPageLayout.setHorizontalGroup(
+            AdminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 950, Short.MAX_VALUE)
+        );
+        AdminPageLayout.setVerticalGroup(
+            AdminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 559, Short.MAX_VALUE)
+        );
+
+        CreateAccount.setBackground(new java.awt.Color(255, 0, 51));
+        CreateAccount.setMinimumSize(new java.awt.Dimension(920, 550));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
+        jLabel3.setText("CREATE ACCOUNT");
+
+        firstnameTF.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        firstnameLBL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        firstnameLBL.setText("First Name: ");
+
+        surnameLBL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        surnameLBL.setText("Surname: ");
+
+        address1LBL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        address1LBL.setText("Address Line 1:");
+
+        address2LBL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        address2LBL.setText("Address Line 2:");
+
+        countryLBL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        countryLBL.setText("Country");
+
+        countyLBL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        countyLBL.setText("County");
+
+        phonenoLBL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        phonenoLBL.setText("Phone Number");
+
+        dobLBL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        dobLBL.setText("Date of Birth");
+
+        surnameTF.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        address1TF.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        address2TF.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        countyTF.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        countryTF.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        phonenoTF.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        dobTF.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        createAccountBTN.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        createAccountBTN.setText("CREATE ACCOUNT");
+        createAccountBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createAccountBTNActionPerformed(evt);
+            }
+        });
+
+        gobackBTN.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        gobackBTN.setText("GO BACK");
+        gobackBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gobackBTNActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout CreateAccountLayout = new javax.swing.GroupLayout(CreateAccount);
+        CreateAccount.setLayout(CreateAccountLayout);
+        CreateAccountLayout.setHorizontalGroup(
+            CreateAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CreateAccountLayout.createSequentialGroup()
+                .addGap(284, 284, 284)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(CreateAccountLayout.createSequentialGroup()
+                .addGap(76, 76, 76)
+                .addGroup(CreateAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CreateAccountLayout.createSequentialGroup()
+                        .addComponent(phonenoLBL)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(CreateAccountLayout.createSequentialGroup()
+                        .addGroup(CreateAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(CreateAccountLayout.createSequentialGroup()
+                                .addGroup(CreateAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(firstnameLBL, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(address1LBL, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(surnameTF, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, CreateAccountLayout.createSequentialGroup()
+                                .addComponent(countyLBL)
+                                .addGap(103, 103, 103)
+                                .addGroup(CreateAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(CreateAccountLayout.createSequentialGroup()
+                                        .addGap(0, 27, Short.MAX_VALUE)
+                                        .addComponent(gobackBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(createAccountBTN)
+                                        .addGap(185, 185, 185))
+                                    .addGroup(CreateAccountLayout.createSequentialGroup()
+                                        .addComponent(firstnameTF, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(38, 38, 38)
+                                        .addComponent(surnameLBL, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addGroup(CreateAccountLayout.createSequentialGroup()
+                                        .addGroup(CreateAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(address1TF, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(countyTF, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(phonenoTF, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(38, 38, 38)
+                                        .addGroup(CreateAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(CreateAccountLayout.createSequentialGroup()
+                                                .addComponent(countryLBL)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(countryTF, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(CreateAccountLayout.createSequentialGroup()
+                                                .addComponent(address2LBL)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(address2TF, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(CreateAccountLayout.createSequentialGroup()
+                                                .addComponent(dobLBL)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(dobTF, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                        .addGap(103, 103, 103))))
+        );
+        CreateAccountLayout.setVerticalGroup(
+            CreateAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CreateAccountLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49)
+                .addGroup(CreateAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(firstnameTF, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(firstnameLBL)
+                    .addComponent(surnameLBL)
+                    .addComponent(surnameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(49, 49, 49)
+                .addGroup(CreateAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(address1LBL)
+                    .addComponent(address1TF, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(address2LBL)
+                    .addComponent(address2TF, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addGroup(CreateAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(countyLBL)
+                    .addComponent(countyTF, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(countryLBL)
+                    .addComponent(countryTF, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addGroup(CreateAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(phonenoLBL)
+                    .addComponent(phonenoTF, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dobLBL)
+                    .addComponent(dobTF, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(58, 58, 58)
+                .addGroup(CreateAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(createAccountBTN)
+                    .addComponent(gobackBTN))
+                .addGap(47, 47, 47))
+        );
+
+        Home.setBackground(new java.awt.Color(102, 102, 102));
         Home.setMinimumSize(new java.awt.Dimension(920, 550));
+        Home.setPreferredSize(new java.awt.Dimension(920, 550));
+
+        loginLBL.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
+        loginLBL.setText("LOGIN");
+
+        passwordTF.setText("jTextField1");
+
+        usernameLBL.setText("Username");
+
+        passwordLBL.setText("Password");
+
+        usernameTF.setText("jTextField1");
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jLabel1.setText("DON'T HAVE AN ACCOUNT?");
+
+        jLabel2.setText("Create an Account");
+
+        hereBTN.setText("HERE");
+        hereBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hereBTNActionPerformed(evt);
+            }
+        });
+
+        loginBTN.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        loginBTN.setText("LOGIN");
+        loginBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginBTNActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout HomeLayout = new javax.swing.GroupLayout(Home);
         Home.setLayout(HomeLayout);
         HomeLayout.setHorizontalGroup(
             HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomeLayout.createSequentialGroup()
+                .addContainerGap(515, Short.MAX_VALUE)
+                .addGroup(HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomeLayout.createSequentialGroup()
+                            .addGroup(HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(usernameTF, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(passwordLBL, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(passwordTF, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(loginLBL, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(usernameLBL, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(HomeLayout.createSequentialGroup()
+                                    .addGap(39, 39, 39)
+                                    .addComponent(loginBTN)))
+                            .addGap(222, 222, 222))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomeLayout.createSequentialGroup()
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(148, 148, 148)))
+                    .addGroup(HomeLayout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(hereBTN)
+                        .addContainerGap())))
         );
         HomeLayout.setVerticalGroup(
             HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(HomeLayout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(loginLBL, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(usernameLBL)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(usernameTF, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(passwordLBL)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(passwordTF, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(loginBTN)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22)
+                .addGroup(HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(hereBTN))
+                .addGap(75, 75, 75))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Home, javax.swing.GroupLayout.PREFERRED_SIZE, 889, Short.MAX_VALUE)
+            .addComponent(Home, javax.swing.GroupLayout.DEFAULT_SIZE, 962, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(6, 6, 6)
+                    .addComponent(CreateAccount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(QuizPage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(AdminPage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(6, 6, 6)
+                    .addComponent(MenuPage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(6, 6, 6)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Home, javax.swing.GroupLayout.PREFERRED_SIZE, 524, Short.MAX_VALUE)
+            .addComponent(Home, javax.swing.GroupLayout.DEFAULT_SIZE, 571, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(6, 6, 6)
+                    .addComponent(CreateAccount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(QuizPage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(AdminPage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(6, 6, 6)
+                    .addComponent(MenuPage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(6, 6, 6)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void hereBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hereBTNActionPerformed
+        // TODO add your handling code here:
+        CreateAccount.setVisible(true);
+        Home.setVisible(false);
+        AdminPage.setVisible(false);
+        QuizPage.setVisible(false);
+        MenuPage.setVisible(false);
+    }//GEN-LAST:event_hereBTNActionPerformed
+
+    private void gobackBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gobackBTNActionPerformed
+        // TODO add your handling code here:
+        CreateAccount.setVisible(false);
+        Home.setVisible(true);
+        AdminPage.setVisible(false);
+        QuizPage.setVisible(false);
+        MenuPage.setVisible(false);
+    }//GEN-LAST:event_gobackBTNActionPerformed
+
+    private void createAccountBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAccountBTNActionPerformed
+        // TODO add your handling code here:
+        CreateAccount.setVisible(false);
+        Home.setVisible(false);
+        AdminPage.setVisible(false);
+        QuizPage.setVisible(false);
+        MenuPage.setVisible(true);
+    }//GEN-LAST:event_createAccountBTNActionPerformed
+
+    private void menuGoHomePageBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuGoHomePageBTNActionPerformed
+        // TODO add your handling code here:
+        CreateAccount.setVisible(false);
+        Home.setVisible(true);
+        AdminPage.setVisible(false);
+        QuizPage.setVisible(false);
+        MenuPage.setVisible(false);
+    }//GEN-LAST:event_menuGoHomePageBTNActionPerformed
+
+    private void quizBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quizBTNActionPerformed
+        // TODO add your handling code here:
+        CreateAccount.setVisible(false);
+        Home.setVisible(false);
+        AdminPage.setVisible(false);
+        QuizPage.setVisible(true);
+        MenuPage.setVisible(false);
+    }//GEN-LAST:event_quizBTNActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        CreateAccount.setVisible(false);
+        Home.setVisible(false);
+        AdminPage.setVisible(false);
+        QuizPage.setVisible(false);
+        MenuPage.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void loginBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBTNActionPerformed
+        // TODO add your handling code here:
+        CreateAccount.setVisible(false);
+        Home.setVisible(false);
+        AdminPage.setVisible(false);
+        QuizPage.setVisible(false);
+        MenuPage.setVisible(true);
+    }//GEN-LAST:event_loginBTNActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -92,8 +687,85 @@ public class QuizJFrame extends javax.swing.JFrame {
             }
         });
     }
-
+    /*
+     public class RoundJTextField extends JTextField {
+    private Shape shape;
+    public RoundJTextField(int size) {
+        super(size);
+        setOpaque(false); // As suggested by @AVD in comment.
+    }
+    protected void paintComponent(Graphics g) {
+         g.setColor(getBackground());
+         g.fillRoundRect(0, 0, getWidth()-1, getHeight()-1, 15, 15);
+         super.paintComponent(g);
+    }
+    protected void paintBorder(Graphics g) {
+         g.setColor(getForeground());
+         g.drawRoundRect(0, 0, getWidth()-1, getHeight()-1, 15, 15);
+    }
+    public boolean contains(int x, int y) {
+         if (shape == null || !shape.getBounds().equals(getBounds())) {
+             shape = new RoundRectangle2D.Float(0, 0, getWidth()-1, getHeight()-1, 15, 15);
+         }
+         return shape.contains(x, y);
+    }
+}
+*/
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel AdminPage;
+    private javax.swing.JPanel CreateAccount;
     private javax.swing.JPanel Home;
+    private javax.swing.JPanel MenuPage;
+    private javax.swing.JPanel QuizPage;
+    private javax.swing.JLabel address1LBL;
+    private javax.swing.JTextField address1TF;
+    private javax.swing.JLabel address2LBL;
+    private javax.swing.JTextField address2TF;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel countryLBL;
+    private javax.swing.JTextField countryTF;
+    private javax.swing.JLabel countyLBL;
+    private javax.swing.JTextField countyTF;
+    private javax.swing.JButton createAccountBTN;
+    private javax.swing.JLabel dobLBL;
+    private javax.swing.JTextField dobTF;
+    private javax.swing.JLabel firstnameLBL;
+    private javax.swing.JTextField firstnameTF;
+    private javax.swing.JButton gobackBTN;
+    private javax.swing.JButton hereBTN;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JButton learningBTN;
+    private javax.swing.JButton loginBTN;
+    private javax.swing.JLabel loginLBL;
+    private javax.swing.JButton menuGoHomePageBTN;
+    private javax.swing.JLabel passwordLBL;
+    private javax.swing.JTextField passwordTF;
+    private javax.swing.JLabel phonenoLBL;
+    private javax.swing.JTextField phonenoTF;
+    private javax.swing.JButton progtrackerBTN;
+    private javax.swing.JButton quizBTN;
+    private javax.swing.JLabel surnameLBL;
+    private javax.swing.JTextField surnameTF;
+    private javax.swing.JLabel usernameLBL;
+    private javax.swing.JTextField usernameTF;
     // End of variables declaration//GEN-END:variables
 }
