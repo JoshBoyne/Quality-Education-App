@@ -54,6 +54,11 @@ public class QuizJFrame extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         AdminPage = new javax.swing.JPanel();
+        adminProgressBTN = new javax.swing.JButton();
+        adminLearnReBTN = new javax.swing.JButton();
+        adminQuizBTN = new javax.swing.JButton();
+        adminLogOutBTN = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
         CreateAccount = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         firstnameTF = new javax.swing.JTextField();
@@ -84,6 +89,15 @@ public class QuizJFrame extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         hereBTN = new javax.swing.JButton();
         loginBTN = new javax.swing.JButton();
+        adminBTN = new javax.swing.JButton();
+        quizAdminPage = new javax.swing.JPanel();
+        adminQuizGoBackBTN = new javax.swing.JButton();
+        adminQuizEditBTN = new javax.swing.JButton();
+        adminQuizDeleteBTN = new javax.swing.JButton();
+        adminQuizCreateBTN = new javax.swing.JButton();
+        adminQuizCB = new javax.swing.JComboBox<>();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        adminQuizTA = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -148,7 +162,7 @@ public class QuizJFrame extends javax.swing.JFrame {
                 .addGap(83, 83, 83))
         );
 
-        QuizPage.setBackground(new java.awt.Color(255, 255, 153));
+        QuizPage.setBackground(new java.awt.Color(124, 69, 231));
         QuizPage.setMinimumSize(new java.awt.Dimension(920, 550));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
@@ -278,15 +292,61 @@ public class QuizJFrame extends javax.swing.JFrame {
         AdminPage.setBackground(new java.awt.Color(51, 0, 255));
         AdminPage.setMinimumSize(new java.awt.Dimension(920, 550));
 
+        adminProgressBTN.setText("PROGRESS TRACKER");
+
+        adminLearnReBTN.setText("LEARNING RESOURCES");
+
+        adminQuizBTN.setText("QUIZZES AND TESTS");
+        adminQuizBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adminQuizBTNActionPerformed(evt);
+            }
+        });
+
+        adminLogOutBTN.setText("LOG OUT");
+        adminLogOutBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adminLogOutBTNActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
+        jLabel7.setText("ADMIN PAGE");
+
         javax.swing.GroupLayout AdminPageLayout = new javax.swing.GroupLayout(AdminPage);
         AdminPage.setLayout(AdminPageLayout);
         AdminPageLayout.setHorizontalGroup(
             AdminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 950, Short.MAX_VALUE)
+            .addGroup(AdminPageLayout.createSequentialGroup()
+                .addGroup(AdminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AdminPageLayout.createSequentialGroup()
+                        .addGap(199, 199, 199)
+                        .addComponent(adminProgressBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(AdminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(adminLogOutBTN)
+                            .addGroup(AdminPageLayout.createSequentialGroup()
+                                .addComponent(adminQuizBTN)
+                                .addGap(18, 18, 18)
+                                .addComponent(adminLearnReBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(AdminPageLayout.createSequentialGroup()
+                        .addGap(331, 331, 331)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(298, Short.MAX_VALUE))
         );
         AdminPageLayout.setVerticalGroup(
             AdminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 559, Short.MAX_VALUE)
+            .addGroup(AdminPageLayout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(83, 83, 83)
+                .addGroup(AdminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(adminProgressBTN)
+                    .addComponent(adminQuizBTN)
+                    .addComponent(adminLearnReBTN))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 164, Short.MAX_VALUE)
+                .addComponent(adminLogOutBTN)
+                .addGap(134, 134, 134))
         );
 
         CreateAccount.setBackground(new java.awt.Color(255, 0, 51));
@@ -480,6 +540,14 @@ public class QuizJFrame extends javax.swing.JFrame {
             }
         });
 
+        adminBTN.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        adminBTN.setText("ADMIN");
+        adminBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adminBTNActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout HomeLayout = new javax.swing.GroupLayout(Home);
         Home.setLayout(HomeLayout);
         HomeLayout.setHorizontalGroup(
@@ -497,7 +565,9 @@ public class QuizJFrame extends javax.swing.JFrame {
                                 .addComponent(usernameLBL, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(HomeLayout.createSequentialGroup()
                                     .addGap(39, 39, 39)
-                                    .addComponent(loginBTN)))
+                                    .addGroup(HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(adminBTN)
+                                        .addComponent(loginBTN))))
                             .addGap(222, 222, 222))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomeLayout.createSequentialGroup()
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -523,13 +593,82 @@ public class QuizJFrame extends javax.swing.JFrame {
                 .addComponent(passwordTF, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(loginBTN)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addGap(26, 26, 26)
+                .addComponent(adminBTN)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22)
                 .addGroup(HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(hereBTN))
                 .addGap(75, 75, 75))
+        );
+
+        quizAdminPage.setBackground(new java.awt.Color(0, 255, 153));
+
+        adminQuizGoBackBTN.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        adminQuizGoBackBTN.setText("GO BACK");
+        adminQuizGoBackBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adminQuizGoBackBTNActionPerformed(evt);
+            }
+        });
+
+        adminQuizEditBTN.setText("EDIT");
+
+        adminQuizDeleteBTN.setText("DELETE");
+
+        adminQuizCreateBTN.setText("CREATE");
+
+        adminQuizCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Topic 1", "Topic 2", "Topic 3", "Topic 4", " " }));
+
+        adminQuizTA.setColumns(20);
+        adminQuizTA.setRows(5);
+        jScrollPane3.setViewportView(adminQuizTA);
+
+        javax.swing.GroupLayout quizAdminPageLayout = new javax.swing.GroupLayout(quizAdminPage);
+        quizAdminPage.setLayout(quizAdminPageLayout);
+        quizAdminPageLayout.setHorizontalGroup(
+            quizAdminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(quizAdminPageLayout.createSequentialGroup()
+                .addGroup(quizAdminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(quizAdminPageLayout.createSequentialGroup()
+                        .addGap(63, 63, 63)
+                        .addComponent(adminQuizGoBackBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, quizAdminPageLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(adminQuizCreateBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(74, 74, 74)
+                        .addComponent(adminQuizEditBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(92, 92, 92)))
+                .addComponent(adminQuizDeleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(299, 299, 299))
+            .addGroup(quizAdminPageLayout.createSequentialGroup()
+                .addGroup(quizAdminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(quizAdminPageLayout.createSequentialGroup()
+                        .addGap(372, 372, 372)
+                        .addComponent(adminQuizCB, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(quizAdminPageLayout.createSequentialGroup()
+                        .addGap(180, 180, 180)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 583, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(187, Short.MAX_VALUE))
+        );
+        quizAdminPageLayout.setVerticalGroup(
+            quizAdminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(quizAdminPageLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(adminQuizGoBackBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59)
+                .addComponent(adminQuizCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
+                .addGroup(quizAdminPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(adminQuizCreateBTN)
+                    .addComponent(adminQuizDeleteBTN)
+                    .addComponent(adminQuizEditBTN))
+                .addGap(64, 64, 64))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -557,6 +696,11 @@ public class QuizJFrame extends javax.swing.JFrame {
                     .addGap(6, 6, 6)
                     .addComponent(MenuPage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGap(6, 6, 6)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(quizAdminPage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -581,6 +725,11 @@ public class QuizJFrame extends javax.swing.JFrame {
                     .addGap(6, 6, 6)
                     .addComponent(MenuPage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGap(6, 6, 6)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(quizAdminPage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
 
         pack();
@@ -653,10 +802,49 @@ public class QuizJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void adminBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminBTNActionPerformed
+        // TODO add your handling code here:
+        CreateAccount.setVisible(false);
+        Home.setVisible(false);
+        AdminPage.setVisible(true);
+        QuizPage.setVisible(false);
+        MenuPage.setVisible(false);
+    }//GEN-LAST:event_adminBTNActionPerformed
+
+    private void adminLogOutBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminLogOutBTNActionPerformed
+        // TODO add your handling code here:
+        CreateAccount.setVisible(false);
+        Home.setVisible(true);
+        AdminPage.setVisible(false);
+        QuizPage.setVisible(false);
+        MenuPage.setVisible(false);
+    }//GEN-LAST:event_adminLogOutBTNActionPerformed
+
+    private void adminQuizBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminQuizBTNActionPerformed
+        // TODO add your handling code here:
+         CreateAccount.setVisible(false);
+        Home.setVisible(false);
+        AdminPage.setVisible(false);
+        QuizPage.setVisible(false);
+        MenuPage.setVisible(false);
+        quizAdminPage.setVisible(true);
+    }//GEN-LAST:event_adminQuizBTNActionPerformed
+
+    private void adminQuizGoBackBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminQuizGoBackBTNActionPerformed
+        // TODO add your handling code here:
+        CreateAccount.setVisible(false);
+        Home.setVisible(false);
+        AdminPage.setVisible(true);
+        QuizPage.setVisible(false);
+        MenuPage.setVisible(false);
+        quizAdminPage.setVisible(false);
+    }//GEN-LAST:event_adminQuizGoBackBTNActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -686,7 +874,10 @@ public class QuizJFrame extends javax.swing.JFrame {
                 new QuizJFrame().setVisible(true);
             }
         });
+       
     }
+    
+    
     /*
      public class RoundJTextField extends JTextField {
     private Shape shape;
@@ -723,6 +914,17 @@ public class QuizJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField address1TF;
     private javax.swing.JLabel address2LBL;
     private javax.swing.JTextField address2TF;
+    private javax.swing.JButton adminBTN;
+    private javax.swing.JButton adminLearnReBTN;
+    private javax.swing.JButton adminLogOutBTN;
+    private javax.swing.JButton adminProgressBTN;
+    private javax.swing.JButton adminQuizBTN;
+    private javax.swing.JComboBox<String> adminQuizCB;
+    private javax.swing.JButton adminQuizCreateBTN;
+    private javax.swing.JButton adminQuizDeleteBTN;
+    private javax.swing.JButton adminQuizEditBTN;
+    private javax.swing.JButton adminQuizGoBackBTN;
+    private javax.swing.JTextArea adminQuizTA;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel countryLBL;
     private javax.swing.JTextField countryTF;
@@ -747,11 +949,13 @@ public class QuizJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton learningBTN;
     private javax.swing.JButton loginBTN;
@@ -762,6 +966,7 @@ public class QuizJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel phonenoLBL;
     private javax.swing.JTextField phonenoTF;
     private javax.swing.JButton progtrackerBTN;
+    private javax.swing.JPanel quizAdminPage;
     private javax.swing.JButton quizBTN;
     private javax.swing.JLabel surnameLBL;
     private javax.swing.JTextField surnameTF;

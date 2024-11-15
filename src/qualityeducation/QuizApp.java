@@ -8,8 +8,7 @@ package qualityeducation;
  *
  * @author Josh
  */
-public class QuizApp {
-    public static void main(String[]args){
-        
-    }
+public class QuizApp extends QuizJFrame{
+    public static void main(String[]args){       
+}
 }
